@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson5
+CMAKE_SOURCE_DIR = /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson5/build
+CMAKE_BINARY_DIR = /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson3/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson5/build/CMakeFiles /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson5/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson3/build/CMakeFiles /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson3/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson5/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fengyusu/package/slam/v_slam_lesson/v_slam_homework/lesson3/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,84 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named icp
+# Target rules for targets named draw_trajectory
 
 # Build rule for target.
-icp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 icp
-.PHONY : icp
+draw_trajectory: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 draw_trajectory
+.PHONY : draw_trajectory
 
 # fast build rule for target.
-icp/fast:
-	$(MAKE) -f CMakeFiles/icp.dir/build.make CMakeFiles/icp.dir/build
-.PHONY : icp/fast
+draw_trajectory/fast:
+	$(MAKE) -f CMakeFiles/draw_trajectory.dir/build.make CMakeFiles/draw_trajectory.dir/build
+.PHONY : draw_trajectory/fast
 
-#=============================================================================
-# Target rules for targets named GN-BA
+draw_trajectory.o: draw_trajectory.cpp.o
 
-# Build rule for target.
-GN-BA: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GN-BA
-.PHONY : GN-BA
-
-# fast build rule for target.
-GN-BA/fast:
-	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/build
-.PHONY : GN-BA/fast
-
-GN-BA.o: GN-BA.cpp.o
-
-.PHONY : GN-BA.o
+.PHONY : draw_trajectory.o
 
 # target to build an object file
-GN-BA.cpp.o:
-	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/GN-BA.cpp.o
-.PHONY : GN-BA.cpp.o
+draw_trajectory.cpp.o:
+	$(MAKE) -f CMakeFiles/draw_trajectory.dir/build.make CMakeFiles/draw_trajectory.dir/draw_trajectory.cpp.o
+.PHONY : draw_trajectory.cpp.o
 
-GN-BA.i: GN-BA.cpp.i
+draw_trajectory.i: draw_trajectory.cpp.i
 
-.PHONY : GN-BA.i
-
-# target to preprocess a source file
-GN-BA.cpp.i:
-	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/GN-BA.cpp.i
-.PHONY : GN-BA.cpp.i
-
-GN-BA.s: GN-BA.cpp.s
-
-.PHONY : GN-BA.s
-
-# target to generate assembly for a file
-GN-BA.cpp.s:
-	$(MAKE) -f CMakeFiles/GN-BA.dir/build.make CMakeFiles/GN-BA.dir/GN-BA.cpp.s
-.PHONY : GN-BA.cpp.s
-
-icp.o: icp.cpp.o
-
-.PHONY : icp.o
-
-# target to build an object file
-icp.cpp.o:
-	$(MAKE) -f CMakeFiles/icp.dir/build.make CMakeFiles/icp.dir/icp.cpp.o
-.PHONY : icp.cpp.o
-
-icp.i: icp.cpp.i
-
-.PHONY : icp.i
+.PHONY : draw_trajectory.i
 
 # target to preprocess a source file
-icp.cpp.i:
-	$(MAKE) -f CMakeFiles/icp.dir/build.make CMakeFiles/icp.dir/icp.cpp.i
-.PHONY : icp.cpp.i
+draw_trajectory.cpp.i:
+	$(MAKE) -f CMakeFiles/draw_trajectory.dir/build.make CMakeFiles/draw_trajectory.dir/draw_trajectory.cpp.i
+.PHONY : draw_trajectory.cpp.i
 
-icp.s: icp.cpp.s
+draw_trajectory.s: draw_trajectory.cpp.s
 
-.PHONY : icp.s
+.PHONY : draw_trajectory.s
 
 # target to generate assembly for a file
-icp.cpp.s:
-	$(MAKE) -f CMakeFiles/icp.dir/build.make CMakeFiles/icp.dir/icp.cpp.s
-.PHONY : icp.cpp.s
+draw_trajectory.cpp.s:
+	$(MAKE) -f CMakeFiles/draw_trajectory.dir/build.make CMakeFiles/draw_trajectory.dir/draw_trajectory.cpp.s
+.PHONY : draw_trajectory.cpp.s
 
 # Help Target
 help:
@@ -198,14 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... icp"
-	@echo "... GN-BA"
-	@echo "... GN-BA.o"
-	@echo "... GN-BA.i"
-	@echo "... GN-BA.s"
-	@echo "... icp.o"
-	@echo "... icp.i"
-	@echo "... icp.s"
+	@echo "... draw_trajectory"
+	@echo "... draw_trajectory.o"
+	@echo "... draw_trajectory.i"
+	@echo "... draw_trajectory.s"
 .PHONY : help
 
 

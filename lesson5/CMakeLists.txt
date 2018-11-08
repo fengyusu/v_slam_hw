@@ -19,6 +19,11 @@ include_directories( ${OpenCV_INCLUDE_DIRS} )
 find_package( Sophus REQUIRED )
 include_directories( ${Sophus_INCLUDE_DIRS} )
 
+find_package( Pangolin )
+include_directories( ${Pangolin_INCLUDE_DIRS} )
+
+find_package(PCL 1.3 REQUIRED)
+include_directories( ${PCL_INCLUDE_DIRS} )
 
 set( THIRD_PARTY_LIBS 
     ${OpenCV_LIBS}
@@ -29,3 +34,6 @@ include_directories( ${PROJECT_SOURCE_DIR}/include )
 
 add_executable( GN-BA GN-BA.cpp )
 target_link_libraries( GN-BA ${OpenCV_LIBS} ${PCL_LIBRARIES} ${Pangolin_LIBRARIES} ${Sophus_LIBRARIES})
+
+add_executable( icp icp.cpp )
+target_link_libraries( icp ${OpenCV_LIBS} ${PCL_LIBRARIES} ${Pangolin_LIBRARIES} ${Sophus_LIBRARIES})
